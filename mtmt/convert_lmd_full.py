@@ -151,7 +151,8 @@ def main():
     logging.info("Iterating over names...")
     if args.jobs == 1:
         converted_names = []
-        for name in (pbar := tqdm.tqdm(names)):
+        pbar = tqdm.tqdm(names)
+        for name in pbar:
             pbar.set_postfix_str(name)
             result = process(
                 name,

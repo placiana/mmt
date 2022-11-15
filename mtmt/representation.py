@@ -687,7 +687,7 @@ def main():
     encoding = load_encoding(filename)
 
     # Print the maps
-    print(f"{' Maps ':=^40}")
+    #print(f"{' Maps ':=^40}")
     for key, value in encoding.items():
         if key in (
             "instrument_code_map",
@@ -700,19 +700,19 @@ def main():
             pprint.pprint(value, indent=2)
 
     # Print the variables
-    print(f"{' Variables ':=^40}")
+    #print(f"{' Variables ':=^40}")
     print(f"resolution: {encoding['resolution']}")
     print(f"max_beat: {encoding['max_beat']}")
     print(f"max_duration: {encoding['max_duration']}")
 
     # Print the number of tokens
-    print(f"{' Number of tokens ':=^40}")
+    #print(f"{' Number of tokens ':=^40}")
     keys = ("type", "beat", "position", "pitch", "duration", "instrument")
     for key, value in zip(keys, N_TOKENS):
         print(f"{key}: {value}")
 
     # Print an example
-    print(f"{'Example':=^40}")
+    #print(f"{'Example':=^40}")
     codes = np.array(
         (
             (0, 0, 0, 0, 0, 0),

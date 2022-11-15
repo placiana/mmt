@@ -327,7 +327,8 @@ def main():
         model.train()
         recent_losses = []
 
-        for batch in (pbar := tqdm.tqdm(range(args.valid_steps), ncols=80)):
+        pbar = tqdm.tqdm(range(args.valid_steps), ncols=80)
+        for batch in (pbar):
             # Get next batch
             try:
                 batch = next(train_iterator)
